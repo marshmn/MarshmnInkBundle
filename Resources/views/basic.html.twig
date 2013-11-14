@@ -1,0 +1,264 @@
+{% extends 'MarshmnInkBundle::boilerplate.html.twig' %}
+
+{% block extrastyles %}
+
+    table.facebook td {
+    background: #3b5998;
+    border-color: #2d4473;
+    }
+
+    table.facebook:hover td {
+    background: #2d4473 !important;
+    }
+
+    table.twitter td {
+    background: #00acee;
+    border-color: #0087bb;
+    }
+
+    table.twitter:hover td {
+    background: #0087bb !important;
+    }
+
+    table.google-plus td {
+    background-color: #DB4A39;
+    border-color: #CC0000;
+    }
+
+    table.google-plus:hover td {
+    background: #CC0000 !important;
+    }
+
+    .template-label {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 11px;
+    }
+
+    .callout .wrapper {
+    padding-bottom: 20px;
+    }
+
+    .callout .panel {
+    background: #ECF8FF;
+    border-color: #b9e5ff;
+    }
+
+    .header {
+    background: #999999;
+    }
+
+    .footer .wrapper {
+    background: #ebebeb;
+    }
+
+    .footer h5 {
+    padding-bottom: 10px;
+    }
+
+    table.columns .text-pad {
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+
+    table.columns .left-text-pad {
+    padding-left: 10px;
+    }
+
+    table.columns .right-text-pad {
+    padding-right: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+    table[class="body"] .right-text-pad {
+    padding-left: 10px !important;
+    }
+
+    table[class="body"] .left-text-pad {
+    padding-right: 10px !important;
+    }
+    }
+
+{% endblock %}
+
+{% block content %}
+
+    {% block header %}
+        <table class="row header">
+            <tr>
+                <td class="center" align="center">
+                    <center>
+
+                        <table class="container">
+                            <tr>
+                                <td class="wrapper last">
+
+                                    <table class="twelve columns">
+                                        <tr>
+                                            <td class="six sub-columns">
+                                                {% block headerlefttext %}<span class="template-label">{% block headerleftlabel %}{% endblock %}</span>{% endblock %}
+                                            </td>
+                                            <td class="six sub-columns last" style="text-align:right; vertical-align:middle;">
+                                                {% block headerrighttext %}<span class="template-label">{% block headerrightlabel %}{% endblock %}</span>{% endblock %}
+                                            </td>
+
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+
+                    </center>
+                </td>
+            </tr>
+        </table>
+    {% endblock %}
+
+    <table class="container">
+        <tr>
+            <td>
+
+                {% block maincontent %}
+                    {% block mainbody %}
+                        <table class="row">
+                            <tr>
+                                <td class="wrapper last">
+
+                                    <table class="twelve columns">
+                                        <tr>
+                                            <td>
+                                                {% block bodycontent %}{% endblock %}
+                                            </td>
+                                            <td class="expander"></td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    {% endblock %}
+
+                    {% block callout %}
+                        <table class="row callout">
+                            <tr>
+                                <td class="wrapper last">
+
+                                    <table class="twelve columns">
+                                        <tr>
+                                            <td class="panel">
+                                                {% block calloutcontent %}{% endblock %}
+                                            </td>
+                                            <td class="expander"></td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    {% endblock %}
+                {% endblock %}
+
+                {% block communication %}
+                    <table class="row footer">
+                        <tr>
+                            <td class="wrapper">
+
+                                <table class="six columns">
+                                    <tr>
+                                        <td class="left-text-pad">
+
+                                            {% block connecttitle %}
+                                                <h5>{% block connectlabel %}Connect With Us:{% endblock %}</h5>
+                                            {% endblock %}
+
+                                            {% block facebook %}
+                                                <table class="tiny-button facebook">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="{% block facebooklink %}#{% endblock %}">{% block facebooklabel %}Facebook{% endblock %}</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <br>
+                                            {% endblock %}
+
+                                            {% block twitter %}
+                                                <table class="tiny-button twitter">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="{% block twitterlink %}#{% endblock %}">{% block twitterlabel %}Twitter{% endblock %}</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+                                                <br>
+                                            {% endblock %}
+
+                                            {% block google %}
+                                                <table class="tiny-button google-plus">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="{% block googlelink %}#{% endblock %}">{% block googlelabel %}Google +{% endblock %}</a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            {% endblock %}
+
+                                        </td>
+                                        <td class="expander"></td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                            <td class="wrapper last">
+
+                                <table class="six columns">
+                                    <tr>
+                                        <td class="last right-text-pad">
+                                            {% block contacttitle %}
+                                                <h5>{% block contactlabel %}Contact Info:{% endblock %}</h5>
+                                            {% endblock %}
+
+                                            {% block contactcontent %}{% endblock %}
+                                        </td>
+                                        <td class="expander"></td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                {% endblock %}
+
+                {% block footer %}
+                    <table class="row">
+                        <tr>
+                            <td class="wrapper last">
+
+                                <table class="twelve columns">
+                                    <tr>
+                                        <td align="center">
+                                            <center>
+                                                {% block footercontent %}
+                                                    <p style="text-align:center;"><a href="{% block termslink %}#{% endblock %}">{% block termslabel %}Terms{% endblock %}</a> | <a href="{% block privacylink %}#{% endblock %}">{% block privacylabel %}Privacy{% endblock %}</a> | <a href="{% block unsubscribelink %}#{% endblock %}">{% block unsubscribelabel %}Unsubscribe{% endblock %}</a></p>
+                                                {% endblock %}
+                                            </center>
+                                        </td>
+                                        <td class="expander"></td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                {% endblock %}
+
+                <!-- container end below -->
+            </td>
+        </tr>
+    </table>
+
+{% endblock content %}

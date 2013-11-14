@@ -1,0 +1,26 @@
+{
+    "name": "marshmn/ink-bundle",
+    "type": "symfony-bundle",
+    "description": "integration of Zurb Ink HTML email templates for Symfony2 projects",
+    "keywords": ["zurb", "ink", "symfony2", "email"],
+    "homepage": "https://github.com/marshmn/MarshmnInkBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt N. Marsh",
+            "email": "matt@crazedbytes.net"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "Marshmn\\InkBundle": "" }
+    },
+    "target-dir": "Marshmn/InkBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
