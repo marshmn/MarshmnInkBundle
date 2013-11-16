@@ -1,8 +1,8 @@
 {
     "name": "marshmn/ink-bundle",
     "type": "symfony-bundle",
-    "description": "integration of Zurb Ink HTML email templates for Symfony2 projects",
-    "keywords": ["zurb", "ink", "symfony2", "email"],
+    "description": "Twig adaptions of the Zurb Ink HTML email templates",
+    "keywords": ["zurb", "ink", "symfony2", "twig", "email"],
     "homepage": "https://github.com/marshmn/MarshmnInkBundle",
     "license": "MIT",
     "authors": [
