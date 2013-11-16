@@ -49,6 +49,7 @@ The boilerplate template provides a skeleton email template:
 Alternatively, the basic template provides a more styled appearance:
 
 ::
+
     {% extends 'MarshmnInkBundle::basic.html.twig' %}
 
     {% block headerleftlabel %}My Project{% endblock %}
